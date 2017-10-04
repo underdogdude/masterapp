@@ -26,40 +26,81 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="aa_particles"></div>
-
         <div class="section-login container">
-            <img src="img/web-login.svg" alt="img-banner" 
-                class="section-login__img col-md-8 animated fadeIn"/>
+            <!-- Login -->
+            <span id="section_login" class="animated fadeIn">
+                <div class="col-md-4"  id="form_login">   
+                    <form action="" method="post" name="Login_Form" 
+                        class="section-login__form" id = "formLogin">
+                        <h1 class="text-center text-bold text-title">
+                            Log In
+                        </h1>
+                        <hr>
+                       
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" id="login_id"/>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required="" id="login_password"/>
+                        </div>
 
-            <form action="" method="post" name="Login_Form" 
-            class="section-login__form pull-right col-md-4 animated fadeIn" id="formSubmit">
-                <h1 class="text-center text-bold text-title">
-                    Log In
-                </h1>
-                <hr>
-                <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon1">
-                            <i class="fa fa-briefcase" aria-hidden="true"></i>
-                        </span>
-                    <input type="text" class="form-control" id="business" name="Business" placeholder="Business" required="" autofocus="" />
+                        <p class="text-danger" id = "alert" style="display:none;">Wrong username or password!</p>
+                        <button class="btn btn-lg btn-default btn-block" name="submit" value="Login" type="Submit">
+                            <span class = "text-bold">Login</span>
+                            
+                        </button>
+                    </form>
+                    <h6 class="btn-text text-center text-bold " onclick="view.goToRegister();">Create your survey account</h6>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon1">
-                            <i class="fa fa-user"></i>
-                        </span>
-                    <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
+                <img src="img/web-login.svg" alt="img-banner" id = "img_login"
+                    class="section-login__img col-md-8"/>
+                
+            </span>
+            <!--  CREATE ACCOUNT  -->
+            <span id="section_register " class="animated fadeIn">
+                <div class="col-md-4"  id="form_register">
+                    <form action="" method="post" name="register_Form" 
+                        class="section-login__form">
+                        <h1 class="text-center text-bold text-title">
+                            Create Account
+                        </h1>
+                        <hr>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                </span>
+                            <input type="text" class="form-control" id="business" name="Business" placeholder="Business" required="" autofocus="" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
+                        </div>
+                        <button class="btn btn-lg btn-default btn-block" name="submit" value="register" type="Submit">
+                            <span class = "text-bold">Create Account</span>
+                        </button>
+                    </form>
+
+                    <h6 class="btn-text text-center text-bold " onclick="view.goToLogin();">
+                        << Back to Login
+                    </h6>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon1">
-                            <i class="fa fa-lock"></i>
-                        </span>
-                    <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
-                </div>
-                <button class="btn btn-lg btn-default btn-block" name="submit" value="Login" type="Submit">
-                    <span class = "text-bold">Login</span>
-                    
-                </button>
-            </form>
+                <img src="img/register.svg" alt="img-banner" id = "img_register"
+                    class="section-login__img col-md-8"/>
+            </span>
         </div>        
         <div class="footer">
         <p> &copy; Copyright 2017 &mdash; Whiteline Tech</p>
@@ -68,135 +109,6 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script type="text/javascript">
-    particlesJS("aa_particles", {
-        "particles": {
-            "number": {
-                "value": 60,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#ffffff"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 0.25,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.3,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 3,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
-    var count_particles, stats, update;
-    stats = new Stats;
-    stats.setMode(0);
-    stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '0px';
-    stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
-    count_particles = document.querySelector('.js-count-particles');
-    update = function () {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);;
-</script>
-
+<script src="js/login.js"></script>
+    
 </html>

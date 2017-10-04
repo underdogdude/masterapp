@@ -82,12 +82,14 @@ button {
 .footer {
     position: absolute;
     bottom: 0;
-    color: #777777;
+    color: #a9a9a9;
     width: 100%;
     text-align: center;
 }
 
 .section-login {
+
+    overflow-y:hidden;
     background: white;
     padding: 1em;
     position: absolute;
@@ -110,7 +112,7 @@ button {
 
 .section-login__form {
 
-    padding: 2em;
+    padding: 1.3em;
 }
 
 .section-login__form > .input-group {
@@ -153,6 +155,18 @@ button {
     border: 1.5px solid #4BAEB6;
 }
 
+.btn-text {
+
+    color:#9dccd2 !important;
+    cursor: pointer;
+}
+
+.btn-text:hover, .btn-text:hover, .btn-text:active, .btn-text:visited, .btn-text:link {
+    
+    color:#4BAEB6 !important;
+    text-decoration: underline;
+}
+
 .text-bold {
 
     font-weight: bold;
@@ -188,8 +202,8 @@ button {
 }
 .animated-fast {
 
-    -webkit-animation-duration: .4s !important;
-            animation-duration: .4s !important;
+    -webkit-animation-duration: .3s !important;
+            animation-duration: .3s !important;
     -webkit-animation-fill-mode: both !important;
             animation-fill-mode: both !important;
 }
