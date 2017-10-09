@@ -1,20 +1,18 @@
 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-
 let form_elem = $('#form_login');
 let img_elem = $('#img_login');
+
 const view = {
 
     goToRegister() {
-
-        
-
         form_elem.addClass('animated-fast ' + 'slideOutLeft').one(animationEnd, function() {
-
             form_elem.removeClass('animated-fast ' + 'slideOutLeft');
+
         });
         img_elem.addClass('animated-fast ' + 'slideOutRight').one(animationEnd, function() {
-
             img_elem.removeClass('animated-fast ' + 'slideOutRight');
+
+            $('#section_register').removeClass('hide');
             $('#section_login').hide();
         });
     },
@@ -28,8 +26,7 @@ const view = {
         $('#img_register').addClass('animated-fast ' + 'slideOutRight').one(animationEnd, function() {
             
             $('#img_register').removeClass('animated-fast ' + 'slideOutRight');
-
-            $('#section_register').hide();
+            $('#section_register').addClass('hide');
             $('#section_login').show();
         });
     },

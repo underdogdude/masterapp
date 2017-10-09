@@ -41,7 +41,7 @@
                             <span class="input-group-addon" id="sizing-addon1">
                                     <i class="fa fa-user"></i>
                                 </span>
-                            <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" id="login_id"/>
+                            <input type="text" class="form-control" name="email" placeholder="email" required="" autofocus="" id="login_id"/>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
@@ -51,19 +51,27 @@
                         </div>
 
                         <p class="text-danger" id = "alert" style="display:none;">Wrong username or password!</p>
-                        <button class="btn btn-lg btn-default btn-block" name="submit" value="Login" type="Submit">
-                            <span class = "text-bold">Login</span>
+                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="Login" type="Submit">
+                            <span class = "text-bold color__white">Login</span>
                             
                         </button>
                     </form>
-                    <h6 class="btn-text text-center text-bold " onclick="view.goToRegister();">Create your survey account</h6>
+                    <h6 class="btn-text text-center text-bold ">
+                        Forgot Password ?
+                    </h6>
+
+                    <h5 class="btn-text text-center text-bold margin-top-2" 
+                        onclick="view.goToRegister()" style="font-weight : bolder">
+
+                        Create your survey account
+                    </h5>
                 </div>
                 <img src="img/web-login.svg" alt="img-banner" id = "img_login"
                     class="section-login__img col-md-8"/>
                 
             </span>
             <!--  CREATE ACCOUNT  -->
-            <span id="section_register " class="animated fadeIn">
+            <span id="section_register" class="animated fadeIn hide">
                 <div class="col-md-4"  id="form_register">
                     <form action="" method="post" name="register_Form" 
                         class="section-login__form">
@@ -73,15 +81,10 @@
                         <hr>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                </span>
-                            <input type="text" class="form-control" id="business" name="Business" placeholder="Business" required="" autofocus="" />
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon1">
                                     <i class="fa fa-user"></i>
                                 </span>
-                            <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
+
+                            <input type="text" class="form-control" name="email" placeholder="email" required="" autofocus="" />
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
@@ -89,8 +92,14 @@
                                 </span>
                             <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
                         </div>
-                        <button class="btn btn-lg btn-default btn-block" name="submit" value="register" type="Submit">
-                            <span class = "text-bold">Create Account</span>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                </span>
+                            <input type="password" class="form-control" name="Confirm Password" placeholder="Confirm Password" required="" />
+                        </div>
+                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="register" type="Submit">
+                            <span class = "text-bold color__white">Create Account</span>
                         </button>
                     </form>
 
@@ -107,8 +116,8 @@
         <div>
 </body>
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/login.js"></script>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/login.js" type="text/javascript"></script>
     
 </html>

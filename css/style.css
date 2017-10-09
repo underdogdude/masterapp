@@ -39,6 +39,16 @@ button {
     margin: 15px;
     border: 2px solid #e7e7e7;
 }
+
+.card__template-horizon {
+    min-height: 150px;
+}
+
+.card__template-vertical {
+    min-height: 200px;
+}
+
+
 .card__create-new {
 
     border: 2px dashed #e7e7e7;
@@ -47,6 +57,13 @@ button {
 
 .card > .panel-body {
     min-height: 200px;
+}
+
+.color__eee {
+    color : #4BAEB6;
+}
+.color__white {
+    color: white;
 }
 
 #aa_particles {
@@ -136,6 +153,13 @@ button {
     border-radius: 40px;
 }
 
+.btn-main {
+
+    background: #1CD8D2;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#93EDC7), to(#1CD8D2));
+    background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none !important;
+}
 
 .btn-cancle {
 
@@ -170,8 +194,9 @@ button {
 .text-bold {
 
     font-weight: bold;
-    color: #4BAEB6;
+    
 }
+
 
 .text-red {
 
@@ -183,6 +208,14 @@ button {
 
     color: #4BAEB6;
     font-size: 3em;    
+}
+
+.text-sub-title {
+    color :#ababab;
+    font-weight: bold;
+    margin-top:2em;
+    margin-left: 1em;
+
 }
 
 .text-headline {
@@ -223,9 +256,20 @@ button {
 .nav-style__title {
 
     font-size: 20px;
-    font-weight: bolder;
-    color:#595959;
+    display: inline-block;
     margin-top:20px;
+    cursor: pointer;
+}
+
+.nav-style__title-style-bold{
+
+    color:#4BAEB6;
+    font-weight: bolder;
+}
+
+.nav-style__title-style-thin{
+
+    color:#9dccd2;
 }
 
 .background {
@@ -240,19 +284,43 @@ button {
 }
 
 
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+
+    font-weight: bolder;
+    color: #4BAEB6 !important;
+    border: none;
+    border-bottom: 3px solid ;
+}
+
+.tab-content {
+
+    overflow: auto;
+    max-height: 60vh;
+}
+
+/*Override Bootstrap cs*/
+.input-group-addon {
+
+    color: #4BAEB6 ; 
+    background: white;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
     .container {
         width: 80%;
     }
- }
+    .nav-style__title{
+        display: block;
+        float: left;
+    }
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (max-width: 992px) { 
-    
     .section-login__img {
 
-        width: 50%;
+        width: 45%;
         max-height: 100%;
         text-align: center;
         padding: 0;

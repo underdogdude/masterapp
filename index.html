@@ -26,11 +26,13 @@
         <![endif]-->
     <nav class="navbar navbar-default navbar-fixed-top nav-style">
         <div class="container-fluid">
-            <div class="pull-left">
-                <h1 onClick="location.reload(true);" class="nav-style__title">Master App</h1>
-            </div>
+            <div class="text-center ">
+                <h1 onClick="location.reload(true);" class="nav-style__title">
+                    <span class="nav-style__title-style-bold">Master</span> 
+                    <span class="nav-style__title-style-thin">App</span>
+                </h1>
 
-            <span class="dropdown pull-right nav-style__icon">
+                <span class="dropdown pull-right nav-style__icon">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#7b7a7a">
                     <i class="fa fa-angle-down navstyle-icon" aria-hidden="true"></i>
                     </a>
@@ -38,54 +40,55 @@
                         <li><a onclick="logout()">Log Out</a></li>
                     </ul>
                 </span>
-            <h4 class="font pull-right text-right margin-right-1" style="font-size:14px;margin-top: 10px;">
-                <strong id="usernameDisplay" style="color:#4BAEB6;font-weight:bold">-</strong>
-                <br>
-                <p id="businessDisplay">-</p>
-            </h4>
+                <h4 class="font pull-right text-right margin-right-1" style="font-size:14px;margin-top: 10px;">
+                    <strong id="usernameDisplay" style="color:#4BAEB6;font-weight:bold">-</strong>
+                    <br>
+                    <p id="businessDisplay">-</p>
+                </h4>
+            </div>
         </div>
     </nav>
 
     <div class="container animated bounceInLeft ">
         <h1 class="text-bold text-headline">My Project</h1>
         <div class="row">
-            <div class="panel panel-default margin-top-2 col-md-2 card card__create-new ">
+            <div class="panel panel-default margin-top-2 col-sm-2 card card__create-new ">
                 <div class="panel-body middle">
-                    <button class="btn btn-lg btn-default btn-light" data-toggle="modal" data-target="#myModal">    
-                            <i class="fa fa-plus text-bold" aria-hidden="true"></i>
+                    <button class="btn btn-lg btn-default btn-light btn-main" data-toggle="modal" data-target="#myModal">    
+                            <i class="fa fa-plus text-bold color__white" aria-hidden="true"></i>
                         </button>
                 </div>
-                <h4 class="text-bold text-center">Create New</h4>
+                <h4 class="text-bold text-center color__eee">Create New</h4>
             </div>
-            <div class="panel panel-default margin-top-2 col-md-2 card">
+            <div class="panel panel-default margin-top-2 col-sm-2 card">
                 <div class="panel-body middle">
 
                 </div>
-                <h4 class="text-bold text-center">Name 1</h4>
+                <h4 class="text-bold text-center color__eee">Name 1</h4>
             </div>
-            <div class="panel panel-default margin-top-2 col-md-2 card">
+            <div class="panel panel-default margin-top-2 col-sm-2 card">
                 <div class="panel-body middle">
 
                 </div>
-                <h4 class="text-bold text-center">Name 2</h4>
+                <h4 class="text-bold text-center color__eee">Name 2</h4>
             </div>
-            <div class="panel panel-default margin-top-2 col-md-2 card">
+            <div class="panel panel-default margin-top-2 col-sm-2 card">
                 <div class="panel-body middle">
 
                 </div>
-                <h4 class="text-bold text-center">Name 3</h4>
+                <h4 class="text-bold text-center color__eee">Name 3</h4>
             </div>
-            <div class="panel panel-default margin-top-2 col-md-2 card">
+            <div class="panel panel-default margin-top-2 col-sm-2 card">
                 <div class="panel-body middle">
 
                 </div>
-                <h4 class="text-bold text-center">Name 4</h4>
+                <h4 class="text-bold text-center color__eee">Name 4</h4>
             </div>
-            <div class="panel panel-default margin-top-2 col-md-2 card">
+            <div class="panel panel-default margin-top-2 col-sm-2 card">
                 <div class="panel-body middle">
 
                 </div>
-                <h4 class="text-bold text-center">Name 5</h4>
+                <h4 class="text-bold text-center color__eee">Name 5</h4>
             </div>
         </div>
     </div>
@@ -99,16 +102,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-bold">Create New</h4>
+                    <h4 class="modal-title text-headline">Create New</h4>
                 </div>
                 <div class="modal-body">
                     <div id = "modal-body_1">
                         <p class="text-headline text-headline__thai">เลือกประเภทแบบประเมิน</p>
                         <select class="form-control" id="1" name="type" autocomplete="off">
-                            <option value="1">Hello1</option>
-                            <option value="2">Hello2</option>
-                            <option value="3">Hello3</option>
-                            <option value="4">Hello4</option>
+                            <option value="1">แบบประเมินความพึงพอใจ 1</option>
+                            <option value="2">แบบประเมินความพึงพอใจ 2</option>
+                            <option value="3">แบบประเมินความพึงพอใจ 3</option>
+                            <option value="4">แบบประเมินความพึงพอใจ 4</option>
                         </select>
                         <hr />
                         <p class="text-headline text-headline__thai">ภาษา</p>
@@ -128,7 +131,8 @@
                     <button type="button" class="btn btn-default btn-light" 
                             onclick="view.changeModalState()">
 
-                        <span class="text-bold">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                        <span class="text-bold color__eee">Next 
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
                     
                     </button>
                 </div>
@@ -145,25 +149,62 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-bold">Create New2</h4>
+                    <h4 class="modal-title text-headline">Select Template</h4>
                 </div>
+
                 <div class="modal-body">
-                    <div id = "modal-body_1">
-                        <p class="text-headline text-headline__thai">เลือกประเภทแบบประเมิน</p>
-                        <select class="form-control" id="1" name="type" autocomplete="off">
-                            <option value="1">Hello1</option>
-                            <option value="2">Hello2</option>
-                            <option value="3">Hello3</option>
-                            <option value="4">Hello4</option>
-                        </select>
-                        <hr />
-                        <p class="text-headline text-headline__thai">ภาษา</p>
-                        <select class="form-control" id="2" name="language" autocomplete="off">
-                            <option value="1">Thai</option>
-                            <option value="2">English</option>
-                            <option value="3">China</option>
-                            <option value="4">Japan</option>
-                        </select>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home">Horizontal</a></li>
+                        <li><a data-toggle="tab" href="#menu1">Vertical</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!--Horizon -->
+                        <div id="home" class="tab-pane fade in active">
+                            <p class="text-sub-title">Choose your horizontal template</p>
+                            
+                            <div class= "col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 1</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 2</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 3</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 4</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 5</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 6</h6>
+                            </div>
+                        </div>
+                        <!-- Vertical -->
+                        <div id="menu1" class="tab-pane fade">
+                            <p class="text-sub-title">Choose your vertical template</p>
+
+                            <div class= "col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 1</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 2</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 3</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 4</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 5</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 6</h6>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
@@ -172,11 +213,9 @@
                         <span class="text-red">Close</span>
                     </button>
 
-                    <button type="button" class="btn btn-default btn-light" 
-                            onclick="view.changeModalState()">
-
-                        <span class="text-bold">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-                    
+                    <button type="button" class="btn btn-default btn-light btn-main" 
+                            onclick="view.goToCanvas()">
+                        <span class="text-bold color__white">Continue</span>
                     </button>
                 </div>
             </div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Master App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/designCanvas.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav class="navbar navbar-default navbar-fixed-top nav-style">
+            <div class="container-fluid">
+                <div class="text-center ">
+                    <h1 onClick="view.goToIndex()" class="nav-style__title">
+                        <span class="nav-style__title-style-bold">Master</span> 
+                        <span class="nav-style__title-style-thin">App</span>
+                    </h1>
+
+                    <span class="dropdown pull-right nav-style__icon">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#7b7a7a">
+                        <i class="fa fa-angle-down navstyle-icon" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a onclick="logout()">Log Out</a></li>
+                        </ul>
+                    </span>
+                    <h4 class="font pull-right text-right margin-right-1" style="font-size:14px;margin-top: 10px;">
+                        <strong id="usernameDisplay" style="color:#4BAEB6;font-weight:bold">-</strong>
+                        <br>
+                        <p id="businessDisplay">-</p>
+                    </h4>
+                </div>
+            </div>
+        </nav>
+        <div class="sidenav">
+            
+        </div>
+        
+    </body>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/canvasScript.js"></script>
+
+</html>
