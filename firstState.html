@@ -82,27 +82,39 @@
                     <h2 class="text-title text-bold color__eee text-center">Sent Join Request</h2>
                     
                     <div class="input-group margin-top-3 col-xs-12 col-md-4 col-md-offset-4">
-                        <span class="pull-left">Search Business : </span>
-                            <input type="text" class="form-control" name="bus-name" placeholder="type business for search" required="" autofocus=""/>
+                            <span class="input-group-addon">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" class="form-control" id = "bus_input" name="bus-name" placeholder="Enter your business name" required="" autofocus="" onchange="ctrl.checkBus()"/>
+                            
                     </div>
                     <hr />
-
-                   
-                    <div class="upload-frame">
-                        <img src = "http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle"/>
+                    <!-- show result-->
+                    <div class="hide" id = "showResult">
+                        <div class="upload-frame">
+                            <img src = "http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle"/>
+                        </div>
+                        
+                        <div class="col-md-4 col-md-offset-4">
+                            <button class="btn btn-lg btn-default btn-block btn-light margin-top-2"            name="submit" value="Login" type="Submit">
+                                <span class = "text-bold color__eee">Request</span>
+                            </button>
+                            
+                        </div>
+                    </div>
+                    <!--no result-->
+                    <div class="col-md-4 col-md-offset-4 hide"  id = "noResult">
+                        <h4 class="text-center text-bold margin-top-1 text-sub-title">
+                                Business not found.
+                        </h4>
                     </div>
 
                     <div class="col-md-4 col-md-offset-4">
-                        <button class="btn btn-lg btn-default btn-block btn-light margin-top-2"             name="submit" value="Login" type="Submit">
-                            <span class = "text-bold color__eee">Request</span>
-                        </button>
-                        
-                     <h6 class="btn-text text-center text-bold margin-top-1"
-                            onclick="view.changeState('state_joinRequest','state_select');">
-                            << Back
-                    </h6>
+                        <h6 class="btn-text text-center text-bold margin-top-1"
+                                onclick="view.changeState('state_joinRequest','state_select');">
+                                << Back
+                        </h6>
                     </div>
-
                 </div>
             </div>        
             <div class="footer">

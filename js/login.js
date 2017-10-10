@@ -40,12 +40,12 @@ $('#formLogin').submit(function (e) {
     let id = $('#login_id').val();
     let pass = $('#login_password').val()
     
-    if(id === 'test' && pass === 'test') {
+    if(id === 'vippass' && pass === 'vippass') {
 
         let res = document.URL.replace("login", "index");
                   window.open(res,"_self");
 
-    }else if(id === 'first' && pass === 'first') {
+    }else if(id === 'firsttime' && pass === 'firsttime') {
 
         let res = document.URL.replace("login", "firstState");
                   window.open(res,"_self");

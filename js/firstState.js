@@ -24,6 +24,23 @@ const view = {
     }
 }
 
+const business_inDB = ['krungsri', 'jackfruit', 'bright', 'pineapple', 'apple'];
+
+const ctrl = {
+    checkBus() {
+        
+        let value = document.getElementById('bus_input').value.toLowerCase();
+        let found = business_inDB.indexOf(value);
+        if( found !== -1 ) {
+            $('#showResult').removeClass('hide');
+            $('#noResult').addClass('hide');
+        }else{
+            $('#noResult').removeClass('hide');
+            $('#showResult').addClass('hide');
+        }
+    }
+}
+
 $("input[name=logo-file]").change(function () {
     if (this.files && this.files[0]) {
         var reader = new FileReader();
