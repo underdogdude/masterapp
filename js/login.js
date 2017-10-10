@@ -43,11 +43,16 @@ $('#formLogin').submit(function (e) {
     if(id === 'test' && pass === 'test') {
 
         let res = document.URL.replace("login", "index");
-              window.open(res,"_self");
+                  window.open(res,"_self");
+
+    }else if(id === 'first' && pass === 'first') {
+
+        let res = document.URL.replace("login", "firstState");
+                  window.open(res,"_self");
+
     }else {
 
         form_elem.addClass('animated-fast ' + 'shake').one(animationEnd, function() {
-
             form_elem.removeClass('animated-fast ' + 'shake');
         });
         $('#alert').show();

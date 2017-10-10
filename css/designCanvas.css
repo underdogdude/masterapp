@@ -8,11 +8,14 @@ body {
     width: 30%; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 60px;
+    top: 104px;
     left: 0;
-    background-color: #ffffff; 
+    background-color: #eee; 
     overflow-x: hidden; /* Disable horizontal scroll */
+    -webkit-transition: 0.5s;
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow : 0 0 5px rgba(0, 0, 0, 0.4);
+
 }
 
 /* The navigation menu links */
@@ -22,6 +25,7 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
+    -webkit-transition: 0.3s;
     transition: 0.3s
 }
 
@@ -41,6 +45,7 @@ body {
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
+    -webkit-transition: margin-left .5s;
     transition: margin-left .5s;
     padding: 20px;
 }
@@ -49,4 +54,44 @@ body {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+.nav>li {
+    margin : 0;
+}
+
+.nav-tabs>li>a {
+
+    border-radius: 0;
+    color: grey;
+    font-weight: bold;
+}
+
+.nav-tabs>li>a:hover {
+
+    background: #ccc;
+    border: none;
+    color: white;
+}
+
+.nav-tabs__menu {
+
+    background: #ccc;
+}
+
+.nav-style {
+
+    border-bottom : none;
+}
+
+.left {
+
+    position: absolute !important;
+    left: 0 !important;
+}
+
+.right {
+
+    position: absolute !important;
+    right: 0 !important;
 }
