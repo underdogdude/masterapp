@@ -1,4 +1,9 @@
-
+let business = document.getElementById('businessDisplay');
+      business.innerHTML = sessionStorage.bus;
+let business_img = document.getElementById('bus_thumbnail');
+if (sessionStorage.img) {
+    business_img.src = sessionStorage.img;
+}
 
 const view = {
 

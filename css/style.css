@@ -225,6 +225,12 @@ button {
      color: #ea6e84;
 }
 
+.text-green {
+
+     font-weight: bold;
+     color: #2ABB9B;
+}
+
 .text-title {
 
     color: #4BAEB6;
@@ -320,12 +326,24 @@ button {
     max-height: 60vh;
 }
 
-/*Override Bootstrap cs*/
+/*Override Bootstrap css*/
 .input-group-addon {
 
     color: #4BAEB6 ; 
     background: white;
 }
+.form-control-feedback {
+    line-height: 70px;
+}
+.has-success .form-control , .has-success .form-control:focus {
+   
+    border-color: #2ABB9B;
+}
+.has-success .form-control-feedback {
+     color: #2ABB9B;
+}
+
+/*Override Bootstrap css*/
 
 .upload-frame {
 

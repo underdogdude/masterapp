@@ -2,129 +2,142 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Master App</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    
-    <body>
-        <!--[if lt IE 7]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Master App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-            <div id="aa_particles"></div>
+    <div id="aa_particles"></div>
 
-            <div class="section-login container">
+    <div class="section-login container">
 
-                <!--Get Started-->
-                <div class="animated-fast slideInLeft" id = "state_select">
-                    <h2 class="text-title text-bold color__eee text-center"> Get Start </h2>
-                    <img src="img/getstart.svg" alt="bg" class="section-login__img opacity" style="opacity:.8;">
-                        <div class="col-md-4 col-md-offset-4">
-                            <button class="btn btn-lg btn-default btn-block btn-main margin-top-2 btn-round"         name="submit" value="Login" type="Submit"
-                                    onclick = "view.changeState('state_select','state_createBusiness');">
+        <!--Get Started-->
+        <div class="animated-fast slideInLeft" id="state_select">
+            <h2 class="text-title text-bold color__eee text-center"> Get Start </h2>
+            <img src="img/getstart.svg" alt="bg" class="section-login__img opacity" style="opacity:.8;" width="450px">
+            <div class="col-md-4 col-md-offset-4">
+                <button class="btn btn-lg btn-default btn-block btn-main margin-top-2 btn-round" name="submit" value="Login" type="Submit"
+                    onclick="view.changeState('state_select','state_createBusiness');">
 
                                 <span class = "text-bold color__white">Create Business</span>
                             </button>
-                            <button class="btn btn-lg btn-default btn-block btn-main btn-round"                      name="submit" value="Login" type="Submit"
-                                    onclick = "view.changeState('state_select','state_joinRequest');">
+                <button class="btn btn-lg btn-default btn-block btn-main btn-round" name="submit" value="Login" type="Submit" onclick="view.changeState('state_select','state_joinRequest');">
 
                                 <span class = "text-bold color__white">Sent Join Request</span>
                             </button>
-                        </div>
+            </div>
+        </div>
+
+        <!--Create Business-->
+        <div class="animated-fast slideInLeft text-center hide" id="state_createBusiness">
+            <h2 class="text-title text-bold color__eee text-center">Create Business</h2>
+            <form name="createBusiness_form" onSubmit="ctrl.getCreateBusData(event)" method="post">
+
+                <div class="input-group margin-top-3 col-xs-12 col-md-4 col-md-offset-4 has-feedback" id="dup_form">
+                    <span class="pull-left">Business Name : </span>
+
+                    <input type="text" class="form-control" name="Business Name" placeholder="Business Name" required="" autofocus="" id="createBusiness_name"
+                        onchange="ctrl.isValidCreateBus()" />
+
+                    <span id="dup_icon_status"></span>
+                    <span id="dup_text_status"></span>
                 </div>
 
-                <!--Create Business-->
-                <div class="animated-fast slideInLeft text-center hide" id = "state_createBusiness">
-                    <h2 class="text-title text-bold color__eee text-center">Create Business</h2>
 
-                    <div class="input-group margin-top-3 col-xs-12 col-md-4 col-md-offset-4">
-                        <span class="pull-left">Business Name : </span>
-                            <input type="text" class="form-control" name="Business Name" placeholder="Business Name" required="" autofocus=""/>
-                    </div>
+                <div class="input-group margin-top-1 col-xs-12 col-md-4 col-md-offset-4">
+                    <span class="pull-left">Upload Logo : </span>
+                    <label class="clearfix btn btn-md btn-default btn-light color__eee text-bold" for="file" style="display:block ;width: 50%;">
+                                        Upload a file
 
-                    <div class="input-group margin-top-2 col-xs-12 col-md-4 col-md-offset-4">
-                        <span class="pull-left">Upload Logo : </span>
-                            <label class="clearfix btn btn-md btn-default btn-light 
-                                          color__eee text-bold"
-                                   for ="file" style="display:block ;width: 50%;">
-                                    Upload a file
-                                    <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
-                            </label>
-                            <input type="file" name="logo-file" id = "file" style="opacity: 0;"/>
-                    </div>
-
-                    <div class="upload-frame">
-                        <img src = "http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle"/>
-                    </div>
-                    <div class="col-md-4 col-md-offset-4">
-                        <button class="btn btn-lg btn-default btn-block btn-main btn-round margin-top-2"             name="submit" value="Login" type="Submit" onclick="view.goToIndex();">
-                            <span class = "text-bold color__white">Continue</span>
-                        </button>
-                        <h6 class="btn-text text-center text-bold margin-top-1"
-                            onclick="view.changeState('state_createBusiness','state_select');">
-                            << Back
-                        </h6>
-                    </div>
+                                        <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
+                                </label>
+                    <input type="file" name="logo-file" id="file" style="opacity: 0;" required="" />
                 </div>
 
-                <!--Join Request-->
-                <div class="animated-fast slideInLeft text-center hide" id = "state_joinRequest">
-                    <h2 class="text-title text-bold color__eee text-center">Sent Join Request</h2>
-                    
-                    <div class="input-group margin-top-3 col-xs-12 col-md-4 col-md-offset-4">
-                            <span class="input-group-addon">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </span>
-                            <input type="text" class="form-control" id = "bus_input" name="bus-name" placeholder="Enter your business name" required="" autofocus="" onchange="ctrl.checkBus()"/>
-                            
-                    </div>
-                    <hr />
-                    <!-- show result-->
-                    <div class="hide" id = "showResult">
-                        <div class="upload-frame">
-                            <img src = "http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle"/>
-                        </div>
-                        
-                        <div class="col-md-4 col-md-offset-4">
-                            <button class="btn btn-lg btn-default btn-block btn-light margin-top-2"            name="submit" value="Login" type="Submit">
+                <div class="upload-frame">
+                    <img src="http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle" id="createBusiness_logo"
+                    />
+                </div>
+                <div class="col-md-4 col-md-offset-4">
+                    <button class="btn btn-lg btn-default btn-block btn-main btn-round margin-top-2" name="createBusiness_btn" type="submit"
+                        id="createBusiness_btn" disabled>
+                                <span class = "text-bold color__white">Continue</span>
+                            </button>
+
+                    <h6 class="btn-text text-center text-bold margin-top-1" onclick="view.changeState('state_createBusiness','state_select');">
+                        << Back </h6>
+                </div>
+            </form>
+        </div>
+
+        <!--Join Request-->
+        <div class="animated-fast slideInLeft text-center hide" id="state_joinRequest">
+            <h2 class="text-title text-bold color__eee text-center">Sent Join Request</h2>
+
+            <div class="input-group margin-top-3 col-xs-12 col-md-4 col-md-offset-4">
+
+                <input type="text" class="form-control" id="bus_input" name="bus-name" placeholder="Enter your business name" required=""
+                    autofocus="" onchange="ctrl.searchBus()" />
+
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search color__eee"></i>
+                                </button>
+                </div>
+
+            </div>
+            <hr />
+            <!-- show result-->
+            <div class="hide" id="showResult">
+                <div class="upload-frame">
+                    <img src="http://www.fanphobia.net/uploads/actors_2/56079/lucy-beaumont.jpg" alt="user" class="img-circle" />
+                </div>
+                <p class="text-bold" id ="search_bus_result_name"></p>
+                <div class="col-md-4 col-md-offset-4">
+                    <button class="btn btn-lg btn-default btn-block btn-light margin-top-2" name="submit" value="Login" type="Submit">
                                 <span class = "text-bold color__eee">Request</span>
                             </button>
-                            
-                        </div>
-                    </div>
-                    <!--no result-->
-                    <div class="col-md-4 col-md-offset-4 hide"  id = "noResult">
-                        <h4 class="text-center text-bold margin-top-1 text-sub-title">
-                                Business not found.
-                        </h4>
-                    </div>
 
-                    <div class="col-md-4 col-md-offset-4">
-                        <h6 class="btn-text text-center text-bold margin-top-1"
-                                onclick="view.changeState('state_joinRequest','state_select');">
-                                << Back
-                        </h6>
-                    </div>
                 </div>
-            </div>        
-            <div class="footer">
-            <p> &copy; Copyright 2017 &mdash; Whiteline Tech</p>
-            <div>
-    </body>
+            </div>
+            <!--no result-->
+            <div class="col-md-4 col-md-offset-4 hide" id="noResult">
+                <h4 class="text-center text-bold margin-top-1 text-sub-title">
+                    Business not found.
+                </h4>
+            </div>
 
-    
-    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/firstState.js" type="text/javascript"></script>
+            <div class="col-md-4 col-md-offset-4">
+                <h6 class="btn-text text-center text-bold margin-top-1" onclick="view.changeState('state_joinRequest','state_select');">
+                    << Back </h6>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p> &copy; Copyright 2017 &mdash; Whiteline Tech</p>
+        <div>
+</body>
+
+
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/firstState.js" type="text/javascript"></script>
 
 </html>

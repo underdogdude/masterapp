@@ -37,8 +37,8 @@ const view = {
 $('#formLogin').submit(function (e) {
     e.preventDefault();
     //code goes here
-    let id = $('#login_id').val();
-    let pass = $('#login_password').val()
+    let id = $('#login_id').val().trim();
+    let pass = $('#login_password').val().trim();
     
     if(id === 'vippass' && pass === 'vippass') {
 
