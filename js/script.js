@@ -1,5 +1,10 @@
+var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 let business = document.getElementById('businessDisplay');
-      business.innerHTML = sessionStorage.bus;
+    business.innerHTML = sessionStorage.bus;
+
+let user = document.getElementById('usernameDisplay');
+    user.innerHTML = sessionStorage.email;
+
 let business_img = document.getElementById('bus_thumbnail');
 if (sessionStorage.img) {
     business_img.src = sessionStorage.img;
@@ -24,3 +29,12 @@ const logout = () => {
     let res = document.URL.replace("index", "login");
               window.open(res, '_self');
 };
+
+const loadAnimate = () => {
+
+    $('#container').addClass('animated ' + 'bounceInLeft').one(animationEnd, function() {
+        $('#container').removeClass('animated ' + 'bounceInLeft');
+    });
+    console.log('bite');
+}
+window.onload = loadAnimate();

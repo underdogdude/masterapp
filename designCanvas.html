@@ -49,23 +49,68 @@
                 </h4>
             </div>
         </div>
+        <ul class="nav nav-tabs middle nav-tabs__menu">
+            <li class="left"><a data-toggle="tab" href="#menu0" onclick="view.goToIndex();">
+                <i class="fa fa-arrow-left margin-right-1" aria-hidden="true"></i>Back</a>
+            </li>
+            <li class="active"><a data-toggle="tab" href="#home">Build</a></li>
+            <li><a data-toggle="tab" href="#menu1">Design</a></li>
+            <li><a data-toggle="tab" href="#menu2">Save</a></li>
+            <li class="right"><a data-toggle="tab" href="#menu3">Publish</a></li>
+        </ul>
     </nav>
-    <ul class="nav nav-tabs middle nav-tabs__menu">
-
-        <li class="left"><a data-toggle="tab" href="#menu0" onclick="view.goToIndex();">
-            <i class="fa fa-arrow-left margin-right-1" aria-hidden="true"></i>Back</a>
-        </li>
-
-        <li class="active"><a data-toggle="tab" href="#home">Build</a></li>
-        <li><a data-toggle="tab" href="#menu1">Design</a></li>
-        <li><a data-toggle="tab" href="#menu2">Save</a></li>
-        <li class="right"><a data-toggle="tab" href="#menu3">Publish</a></li>
-    </ul>
 
     <div class="tab-content">
         <!-- Build -->
         <div id="home" class="tab-pane fade in active">
             <div class="sidenav">
+                <div class="menu-wrapper" >
+                    <ul class="list-group list-custom">
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Background</h4>
+                            <p class="list-group-item-text text-headline">edit your background</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Header</h4>
+                            <p class="list-group-item-text text-headline">edit your Header</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Footer</h4>
+                            <p class="list-group-item-text text-headline">edit your footer</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Logo</h4>
+                            <p class="list-group-item-text text-headline">edit your logo</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Dialog</h4>
+                            <p class="list-group-item-text text-headline">edit your dialog</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">Button Set</h4>
+                            <p class="list-group-item-text text-headline">edit your button set</p>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                            <h4 class="list-group-item-heading text-bold text-menu">etc</h4>
+                            <p class="list-group-item-text text-headline">edit your etc</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-bottom">
+                    <button  class="btn btn-md menu-bottom__button">
+                        <span class="text-bold text-center text-titel">
+                            <i class="fa fa-object-group" aria-hidden="true"></i>
+                            Choose Template
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- Design -->
@@ -73,7 +118,7 @@
             <p class="text-sub-title">Choose your vertical template</p>
         </div>
     </div>
-    
+
 
 </body>
 

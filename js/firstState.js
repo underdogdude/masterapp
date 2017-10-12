@@ -149,11 +149,9 @@ const ctrl = {
         //set undefined bus name value to ''
         const business_name = business_inDB[found] ? business_inDB[found] : '';
         
-        if( found !== -1 ) {
-            view.searchBusResult.found();
-        }else{
-            view.searchBusResult.notFound();
-        }
+        if( found !== -1 ) view.searchBusResult.found();
+        else view.searchBusResult.notFound();
+
         view.searchBusResult.display(business_name);
     },
             
@@ -164,25 +162,16 @@ const ctrl = {
         const has_duplicate = business_list.indexOf(value);
         //set defalt length value to 0
         const length_busname = value.length ? value.length : 0;
-        
-        if(length_busname === 0 || length_busname < 3) {
-            // case minimum char input
-            view.validaterCreateBus.invalid.invalid_minimun();
 
-        }else if(!ctrl.isSpecialChar(value)) {
-            // case special char input
-            view.validaterCreateBus.invalid.invalid_special();
-
-        } else {
-            if( has_duplicate !== -1 ) {
-                // dupicate  
-                view.validaterCreateBus.is_duplicate.duplicate();
-               
-            } else {
-                // Undupicate  
-                view.validaterCreateBus.is_duplicate.Unduplicate();
-
-            }
+        // case minimum char input
+        if(length_busname === 0 || length_busname < 3) view.validaterCreateBus.invalid.invalid_minimun();
+        // case special char input
+        else if(!ctrl.isSpecialChar(value)) view.validaterCreateBus.invalid.invalid_special();
+        else {
+            // dupicate  
+            if( has_duplicate !== -1 ) view.validaterCreateBus.is_duplicate.duplicate();
+            // Undupicate  
+            else view.validaterCreateBus.is_duplicate.Unduplicate();
         }
     },
 

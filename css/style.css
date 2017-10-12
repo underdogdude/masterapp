@@ -244,6 +244,10 @@ button {
     margin-left: 1em;
 
 }
+.text-menu {
+   color: grey;
+
+}
 
 .text-headline {
     color :#ababab;
@@ -410,3 +414,79 @@ button {
     }
 
  }
+
+
+
+
+::-webkit-scrollbar {
+    height: 8px;
+    overflow: visible;
+    width: 8px;
+}
+
+::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, .4);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .25);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .2);
+    background-clip: padding-box;
+    border: none;
+    
+    min-height: 16px;
+    padding: 100px 0 0;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+}
+::-webkit-scrollbar-track:hover {
+    background-color: rgba(0, 0, 0, .05);
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1);
+}
+::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: none;
+}
+.scroll {
+    outline: none;
+    position: fixed;
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    margin: 10px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    background: #F9BF3B;
+}
+
+.scroll:hover {
+    background: #FDE3A7;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.scroll .fa {
+    font-size: 30px;
+    margin-top: -8px;
+    margin-left: 1px;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    font-weight: bold;
+}

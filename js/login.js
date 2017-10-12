@@ -37,7 +37,12 @@ const view = {
 $('#formLogin').submit(function (e) {
     e.preventDefault();
     //code goes here
-    let id = $('#login_id').val().trim();
+    let email = $('#login_email').val();
+
+        // save email to sessgion storage
+        sessionStorage.email = email ? email : 'N/A';
+        
+    let id = email.trim();
     let pass = $('#login_password').val().trim();
     
     if(id === 'vippass' && pass === 'vippass') {
@@ -45,7 +50,7 @@ $('#formLogin').submit(function (e) {
         let res = document.URL.replace("login", "index");
                   window.open(res,"_self");
 
-    }else if(id === 'firsttime' && pass === 'firsttime') {
+    }else if(id === 'first' && pass === 'first') {
 
         let res = document.URL.replace("login", "firstState");
                   window.open(res,"_self");
