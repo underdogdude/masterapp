@@ -20,7 +20,7 @@ const validation_alert = {
         Invalid_form_class : 'has-error'
     }
 }; 
-const business_inDB = ['krungsri', 'jackfruit', 'bright', 'pineapple', 'apple', 'Big', 'camelCASE', 'BIGHEAD'];
+const business_inDB = ['krungsri', 'jackfruit', 'bright', 'pineapple', 'apple','Big' ,'TripleE' , 'camelCASE', 'BIGHEAD'];
 
 const dup_form = document.getElementById('dup_form');
 const dup_icon_status = document.getElementById('dup_icon_status');

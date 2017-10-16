@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Master App</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -55,7 +55,7 @@
             </li>
             <li class="active"><a data-toggle="tab" href="#home">Build</a></li>
             <li><a data-toggle="tab" href="#menu1">Design</a></li>
-            <li><a data-toggle="tab" href="#menu2">Save</a></li>
+            <li><a data-toggle="tab" href="#menu2">Preview</a></li>
             <li class="right"><a data-toggle="tab" href="#menu3">Publish</a></li>
         </ul>
     </nav>
@@ -63,48 +63,332 @@
     <div class="tab-content">
         <!-- Build -->
         <div id="home" class="tab-pane fade in active">
+            <div class="container container__build" id = "containerBuild">
+                <div>
+                    <h6 class="text-bold color__eee">Question 1</h6>
+                    <div class="question-builder">
+                        <div class="margin-top-2">
+                            <div class="question-builder__elem" style="width:80%;">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Header
+                            </div>
+                        </div>
+                        <div class="middle question-builder__elem">
+                            <div class="question-builder__elem">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Text Button 1
+                                <p class="text-center text-headline">value</p> 
+                                
+                            </div>
+                            <div class="question-builder__elem">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Text Button 2
+                                <p class="text-center text-headline">value</p>
+                            </div>
+                            <div class="question-builder__elem">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Text Button 3
+                                <p class="text-center text-headline">value</p>
+                            </div>
+                            <div class="question-builder__elem">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Text Button 4
+                                <p class="text-center text-headline">value</p>
+                            </div>
+                            <div class="question-builder__elem">
+                                <a class="edit text-bold">
+                                    edit
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                                Text Button 5
+                                <p class="text-center text-headline">value</p>
+                            </div>
+                            <div class="question-builder__elem text-bold color__eee" onclick="view.addBtn()" id ="addBtn">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                Add Button 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-light text-bold color__eee middle__elem margin-bottom-2" 
+                    onclick="view.addQuestion();">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    Add Question
+            </button>
+        </div>
+        <!-- Design -->
+        <div id="menu1" class="tab-pane fade">
             <div class="sidenav">
-                <div class="menu-wrapper" >
-                    <ul class="list-group list-custom">
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Background</h4>
-                            <p class="list-group-item-text text-headline">edit your background</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Header</h4>
-                            <p class="list-group-item-text text-headline">edit your Header</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Footer</h4>
-                            <p class="list-group-item-text text-headline">edit your footer</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Logo</h4>
-                            <p class="list-group-item-text text-headline">edit your logo</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Dialog</h4>
-                            <p class="list-group-item-text text-headline">edit your dialog</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">Button Set</h4>
-                            <p class="list-group-item-text text-headline">edit your button set</p>
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
-                            <h4 class="list-group-item-heading text-bold text-menu">etc</h4>
-                            <p class="list-group-item-text text-headline">edit your etc</p>
-                        </li>
-                    </ul>
+                <div class="menu-wrapper">
+                    <div id = "edit_main">
+                        <ul class="list-group list-custom">
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_bg')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Background</h4>
+                                <p class="list-group-item-text text-headline">edit your background</p>
+                            </li>
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_header')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Header</h4>
+                                <p class="list-group-item-text text-headline">edit your Header</p>
+                            </li>
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_footer')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Footer</h4>
+                                <p class="list-group-item-text text-headline">edit your footer</p>
+                            </li>
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_logo')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Logo</h4>
+                                <p class="list-group-item-text text-headline">edit your logo</p>
+                            </li>
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_dialog')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Thank You Dialog</h4>
+                                <p class="list-group-item-text text-headline">edit your thank you dialog</p>
+                            </li>
+                            <li class="list-group-item" onclick = "view.slideIn('edit_main', 'edit_btnset')">
+                                <i class="fa fa-angle-right pull-right list-group-item__icon" aria-hidden="true"></i>
+                                <h4 class="list-group-item-heading text-bold text-menu">Button Set</h4>
+                                <p class="list-group-item-text text-headline">edit your button set</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Menu1 Edit Bg -->
+                    <div class="hide" id = "edit_bg">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_bg', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Background Color
+                        </h4>
+                        <p class="text-sub-title">Primary Background Color</p>
+                        <!--primary-->
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Secondary Background Color</p>
+                        <!--secondary-->
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Upload</p>
+                        <div class="input-group margin-left-2">
+                            <label class="clearfix btn btn-md btn-default btn-light color__eee text-bold" for="file" style="display:block">
+                                                Upload a file
+                                                <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
+                                        </label>
+                            <input type="file" name="logo-file" id="file" style="display:none;" required="" />
+                        </div>
+                    </div>
+                    <!--Menu2 Edit Header -->
+                    <div class="hide" id = "edit_header">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_header', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Header
+                        </h4>
+                        <p class="text-sub-title">Header Text Align</p>
+                        <div class="btn-group margin-left-2" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default text-bold">Left</button>
+                            <button type="button" class="btn btn-default text-bold">Middle</button>
+                            <button type="button" class="btn btn-default text-bold">Right</button>
+                        </div>
+                        <p class="text-sub-title">Text Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Background Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Stroke Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Upload</p>
+                        <div class="input-group margin-left-2">
+                            <label class="clearfix btn btn-md btn-default btn-light color__eee text-bold" for="file" style="display:block">
+                                                Upload a file
+                                                <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
+                                        </label>
+                            <input type="file" name="logo-file" id="file" style="display: none;" required="" />
+                        </div>
+                    </div>
+                    <!--Menu3 Edit Footer -->
+                    <div class="hide" id = "edit_footer">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_footer', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Footer
+                        </h4>
+                        <p class="text-sub-title">Footer Style</p>
+                        <div class="margin-left-2">
+                            <button class="btn text-bold">
+                                <span>Style1</span>
+                            </button>
+                            <button class="btn text-bold">
+                                <span>Style2</span>
+                            </button>
+                        </div>
+                        <p class="text-sub-title">Text Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                    </div>
+                    <!--Menu4 Edit Logo -->
+                    <div class="hide" id = "edit_logo">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_logo', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Logo
+                        </h4>
+                        <p class="text-sub-title">Upload Logo</p>
+                        <div class="input-group margin-left-2">
+                            <label class="clearfix btn btn-md btn-default btn-light color__eee text-bold" for="file" style="display:block">
+                                                Upload a file
+                                                <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
+                                        </label>
+                            <input type="file" name="logo-file" id="file" style="display: none;" required="" />
+                        </div>
+                        <p class="text-sub-title">Logo Align</p>
+                        <div class="btn-group margin-left-2" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default text-bold">Left</button>
+                            <button type="button" class="btn btn-default text-bold">Right</button>
+                        </div>
+                    </div>
+                    <!--Menu5 Edit Dialog -->
+                    <div class="hide" id = "edit_dialog">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_dialog', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Thank You Dialog
+                        </h4>
+                        <p class="text-sub-title">Background Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                        <p class="text-sub-title">Upload Dialog Background</p>
+                        <div class="input-group margin-left-2">
+                            <label class="clearfix btn btn-md btn-default btn-light color__eee text-bold" for="file" style="display:block">
+                                                Upload a file
+                                                <i class="fa fa-upload margin-left-1" aria-hidden="true"></i>
+                                        </label>
+                            <input type="file" name="logo-file" id="file" style="display: none;" required="" />
+                        </div>
+                        <p class="text-sub-title">Text Color</p>
+                        <ui class="color-list margin-left-2">
+                            <li class="color-list__white"></li>
+                            <li class="color-list__red"></li>
+                            <li class="color-list__orange"></li>
+                            <li class="color-list__yellow"></li>
+                            <li class="color-list__green"></li>
+                            <li class="color-list__eee"></li>
+                            <li class="color-list__blue"></li>
+                        </ui>
+                    </div>
+                    <!--Menu6 Edit btnSet -->
+                    <div class="hide" id = "edit_btnset">
+                        <h4 class="text-bold color__eee margin-left-1">
+                            <button onclick="view.slideOut('edit_btnset', 'edit_main')" 
+                                    class="btn btn-light btn-sm-back margin-right-sm">
+                                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            Button
+                        </h4>
+                        <p class="text-sub-title">Select your button set style</p>
+                        <div class="row btn-set-wrapper margin-top-1">
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set1
+                            </div>
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set2
+                            </div>
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set3
+                            </div>
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set4
+                            </div>
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set5
+                            </div>
+                            <div class="col-md-3 btn-set-thumbnail middle btn-light text-bold">
+                                Set6
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="menu-bottom">
-                    <button  class="btn btn-md menu-bottom__button">
+                    <button  class="btn btn-md menu-bottom__button"  data-toggle="modal" data-target="#templateDialog">
                         <span class="text-bold text-center text-titel">
                             <i class="fa fa-object-group" aria-hidden="true"></i>
                             Choose Template
@@ -112,14 +396,100 @@
                     </button>
                 </div>
             </div>
+            <div class="pull-right container" 
+                 style="width: calc(100% - 400px);
+                        padding-left:150px;
+                        padding-right:150px;
+                        margin-top:5em;
+                        margin-bottom:2em;">
+
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+
+            </div>
         </div>
-        <!-- Design -->
-        <div id="menu1" class="tab-pane fade">
-            <p class="text-sub-title">Choose your vertical template</p>
+        <!-- Preview -->
+        <div id="menu2" class="tab-pane fade">
+            <div class="container" >
+
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+                <img src = "img/test.jpg" width="100%"/>
+
+            </div>
         </div>
     </div>
 
+<!-- Modal -->
+    <div id="templateDialog" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-headline">Select Template</h4>
+                </div>
 
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#horizon">Horizontal</a></li>
+                        <li><a data-toggle="tab" href="#vertical">Vertical</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!--Horizon -->
+                        <div id="horizon" class="tab-pane fade in active">
+                            <p class="text-sub-title">Choose your horizontal template</p>
+                            
+                            <div class= "col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 1</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 2</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 3</h6>
+                            </div>
+                            <div class="col-md-5 card card__template-horizon">
+                                <h6 class="middle">Template 4</h6>
+                            </div>
+                        </div>
+                        <!-- Vertical -->
+                        <div id="vertical" class="tab-pane fade">
+                            <p class="text-sub-title">Choose your vertical template</p>
+
+                            <div class= "col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 1</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 2</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 3</h6>
+                            </div>
+                            <div class="col-md-4 card card__template-vertical">
+                                <h6 class="middle">Template 4</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-cancle" data-dismiss="modal">
+                        <span class="text-red">Cancle</span>
+                    </button>
+
+                    <button type="button" class="btn btn-default btn-light btn-main btn-round"                       data-dismiss="modal">
+                        <span class="text-bold color__white">Continue</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 <script src="js/jquery-3.2.1.min.js"></script>

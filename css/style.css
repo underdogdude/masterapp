@@ -41,6 +41,12 @@ button {
 .margin-right-1{
     margin-right: 1em;
 }
+.margin-right-sm{
+    margin-right: .5em;
+}
+.margin-bottom-2{
+    margin-bottom: 2em !important;
+}
 
 .card {
     padding: 0;
@@ -110,6 +116,11 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+}
+
+.middle__elem {
+    display: block;
+    margin:0 auto;
 }
 
 .footer {
@@ -210,6 +221,12 @@ button {
     
     color:#4BAEB6 !important;
     text-decoration: underline;
+}
+
+.btn-sm-back {
+    padding:0px 10px;
+    color: #4BAEB6;
+    font-size: 25px;
 }
 
 .text-bold {
@@ -327,7 +344,11 @@ button {
 .tab-content {
 
     overflow: auto;
-    max-height: 60vh;
+    
+}
+.tab-content__template {
+
+    max-height: 60vh;   
 }
 
 /*Override Bootstrap css*/
