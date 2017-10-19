@@ -1,65 +1,100 @@
-var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+const animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 let form_elem = $('#form_login');
 let img_elem = $('#img_login');
-
+const slideOutLeft = 'animated-fast ' + 'slideOutLeft';
+const slideOutRight = 'animated-fast ' + 'slideOutRight';
 const view = {
 
     goToRegister() {
-        form_elem.addClass('animated-fast ' + 'slideOutLeft').one(animationEnd, function() {
-            form_elem.removeClass('animated-fast ' + 'slideOutLeft');
+        form_elem.addClass(slideOutLeft)
+            .one(animationEnd, function() {
 
+                form_elem.removeClass(slideOutLeft);
         });
-        img_elem.addClass('animated-fast ' + 'slideOutRight').one(animationEnd, function() {
-            img_elem.removeClass('animated-fast ' + 'slideOutRight');
+        img_elem.addClass(slideOutRight)
+            .one(animationEnd, function() {
 
-            $('#section_register').removeClass('hide');
-            $('#section_login').hide();
+                img_elem.removeClass(slideOutRight);
+                $('#section_register').removeClass('hide');
+                $('#section_login').hide();
         });
     },
 
     goToLogin() {
         
-        $('#form_register').addClass('animated-fast ' + 'slideOutLeft').one(animationEnd, function() {
+        $('#form_register').addClass(slideOutLeft)
+            .one(animationEnd, function() {
 
-            $('#form_register').removeClass('animated-fast ' + 'slideOutLeft');
+            $('#form_register').removeClass(slideOutLeft);
         });
-        $('#img_register').addClass('animated-fast ' + 'slideOutRight').one(animationEnd, function() {
+        $('#img_register').addClass(slideOutRight)
+            .one(animationEnd, function() {
             
-            $('#img_register').removeClass('animated-fast ' + 'slideOutRight');
-            $('#section_register').addClass('hide');
-            $('#section_login').show();
+                $('#img_register').removeClass(slideOutRight);
+                $('#section_register').addClass('hide');
+                $('#section_login').show();
         });
     },
 }
 
+const submit = {
+    login() {
 
+        let email = $('#login_email').val().trim();
+        let pass = $('#login_password').val().trim();
+            // save email to sessgion storage
+            sessionStorage.email = email ? email : 'N/A';
+        
+        if(email === 'vippass' && pass === 'vippass') {
+
+            redirect("login", "index");
+        }else if(email === 'first' && pass === 'first') {
+            
+            redirect("login", "firstState");
+        }else {
+
+            form_elem.addClass('animated-fast ' + 'shake')
+                .one(animationEnd, function() {
+                    
+                    form_elem.removeClass('animated-fast ' + 'shake');
+            });
+            $('#alert').show();
+        }
+    },
+
+    register() {
+        
+
+    }
+}
+const ctrl = {
+    
+    isValid(input) {
+
+        let value = document.getElementById(input).value ;
+        console.log(!isNull(value));
+        console.log(!isSpecialChar(value));
+        if( !isNull(value) || !isSpecialChar(value) ) {
+            // TODO
+        }
+    }
+}
+
+const redirect = (from , where) => {
+
+    const res = document.URL.replace(from, where);
+                window.open(res,"_self");
+};
 
 $('#formLogin').submit(function (e) {
+
     e.preventDefault();
-    //code goes here
-    let email = $('#login_email').val();
+    submit.login();    
+});
 
-        // save email to sessgion storage
-        sessionStorage.email = email ? email : 'N/A';
-        
-    let id = email.trim();
-    let pass = $('#login_password').val().trim();
-    
-    if(id === 'vippass' && pass === 'vippass') {
 
-        let res = document.URL.replace("login", "index");
-                  window.open(res,"_self");
+$('#formRegister').submit(function (e) {
 
-    }else if(id === 'first' && pass === 'first') {
-
-        let res = document.URL.replace("login", "firstState");
-                  window.open(res,"_self");
-
-    }else {
-
-        form_elem.addClass('animated-fast ' + 'shake').one(animationEnd, function() {
-            form_elem.removeClass('animated-fast ' + 'shake');
-        });
-        $('#alert').show();
-    }
+    e.preventDefault();
+    submit.register();    
 });

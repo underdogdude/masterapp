@@ -8,6 +8,7 @@
 body {
     font-family: 'Raleway', 'CSChatThai', sans-serif;
      padding-top: 60px;
+     background: #fafafa;
 }
 button {
     outline: none !important;
@@ -123,6 +124,9 @@ button {
     margin:0 auto;
 }
 
+.shadow {
+    box-shadow : inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
 .footer {
     position: absolute;
     bottom: 0;
@@ -260,6 +264,10 @@ button {
     margin-top:2em;
     margin-left: 1em;
 
+}
+
+.grey {
+    color  : #7d7c7c; 
 }
 .text-menu {
    color: grey;

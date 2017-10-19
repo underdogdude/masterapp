@@ -40,39 +40,37 @@ const view = {
         let get_length = document.querySelectorAll('.question-builder').length;
         let div_elem = document.createElement('DIV');
             div_elem.innerHTML = `
-                                <h6 class="text-bold color__eee">Question ${get_length + 1}</h6>
-                                <div class="question-builder">
-                                    <div class="middle margin-top-2">
-                                        <div class="question-builder__elem" style="width:80%;">
-                                        <a class="edit text-bold">
-                                            edit
-                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        </a>
-                                            Header
-                                        </div>
-                                    </div>
-                                    <div class="middle question-builder__elem">
-                                        <div class="question-builder__elem">
-                                            Button 1
-                                        </div>
-                                        <div class="question-builder__elem">
-                                            Button 2
-                                        </div>
-                                        <div class="question-builder__elem">
-                                            Button 3
-                                        </div>
-                                        <div class="question-builder__elem">
-                                            Button 4
-                                        </div>
-                                        <div class="question-builder__elem">
-                                            Button 5
-                                        </div>
-                                        <div class="question-builder__elem">
-                                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                            Add Button 
-                                        </div>
-                                    </div>
-                                </div>`;
+                    <h6 class="text-bold color__eee">Question ${get_length + 1}</h6>
+                    <div class="question-builder shadow">
+                        <div class="question-builder__elem" style="width:80%;">
+                        <a class="edit text-bold">
+                            edit
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                            Header
+                        </div>
+                        <div class="middle question-builder__elem">
+                            <div class="question-builder__elem">
+                                Button 1
+                            </div>
+                            <div class="question-builder__elem">
+                                Button 2
+                            </div>
+                            <div class="question-builder__elem">
+                                Button 3
+                            </div>
+                            <div class="question-builder__elem">
+                                Button 4
+                            </div>
+                            <div class="question-builder__elem">
+                                Button 5
+                            </div>
+                            <div class="question-builder__elem">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                Add Button 
+                            </div>
+                        </div>
+                    </div>`;
         let question = document.getElementById('containerBuild');
             question.appendChild(div_elem);
 

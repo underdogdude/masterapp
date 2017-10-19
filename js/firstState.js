@@ -1,27 +1,6 @@
 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-const validation_alert = {
-    duplicate : {
-        duplicate_text : 'Business name unavailable, Please use another' ,
-        duplicate_text_class : 'pull-left text-red',
-        duplicate_icon : 'glyphicon glyphicon-remove form-control-feedback',
-        duplicate_form_class : 'has-error'
-    },
-    Unduplicate : {
-        Unduplicate_text : 'Business name available' ,
-        Unduplicate_text_class : 'pull-left text-green',
-        Unduplicate_icon : 'glyphicon glyphicon-ok form-control-feedback',
-        Unduplicate_form_class : 'has-success'
-    },
-    Invalid : {
-        Invalid_minimumchar : 'Buiness name must contain at least three character',
-        Invalid_specialchar : 'Buiness name does not contain special character',
-        Invalid_text_class : 'pull-left text-red',
-        Invalid_icon : 'glyphicon glyphicon-remove form-control-feedback',
-        Invalid_form_class : 'has-error'
-    }
-}; 
+console.log(validation_alert);
 const business_inDB = ['krungsri', 'jackfruit', 'bright', 'pineapple', 'apple','Big' ,'TripleE' , 'camelCASE', 'BIGHEAD'];
-
 const dup_form = document.getElementById('dup_form');
 const dup_icon_status = document.getElementById('dup_icon_status');
 const dup_text_status = document.getElementById('dup_text_status');
@@ -68,7 +47,7 @@ const view = {
 
                 let in_mini = validation_alert.Invalid;
                 view.validaterCreateBus.setValidateStatus(
-                    in_mini.Invalid_minimumchar,
+                    'Business name' + in_mini.Invalid_minimumchar,
                     in_mini.Invalid_text_class,
                     in_mini.Invalid_icon
                 );
@@ -82,7 +61,7 @@ const view = {
 
                 let in_spe = validation_alert.Invalid;
                 view.validaterCreateBus.setValidateStatus(
-                    in_spe.Invalid_specialchar,
+                    'Business name' + in_spe.Invalid_specialchar,
                     in_spe.Invalid_text_class,
                     in_spe.Invalid_icon
                 );
@@ -97,7 +76,8 @@ const view = {
 
                 let dup = validation_alert.duplicate;
                 view.validaterCreateBus.setValidateStatus(
-                    dup.duplicate_text,
+
+                    'Business name' + dup.duplicate_text,
                     dup.duplicate_text_class,
                     dup.duplicate_icon
                 );
@@ -110,7 +90,7 @@ const view = {
 
                 let undup = validation_alert.Unduplicate;
                 view.validaterCreateBus.setValidateStatus(
-                    undup.Unduplicate_text, 
+                    'Business name' + undup.Unduplicate_text, 
                     undup.Unduplicate_text_class, 
                     undup.Unduplicate_icon
                 );
@@ -166,7 +146,7 @@ const ctrl = {
         // case minimum char input
         if(length_busname === 0 || length_busname < 3) view.validaterCreateBus.invalid.invalid_minimun();
         // case special char input
-        else if(!ctrl.isSpecialChar(value)) view.validaterCreateBus.invalid.invalid_special();
+        else if(!isSpecialChar(value)) view.validaterCreateBus.invalid.invalid_special();
         else {
             // dupicate  
             if( has_duplicate !== -1 ) view.validaterCreateBus.is_duplicate.duplicate();
@@ -174,12 +154,10 @@ const ctrl = {
             else view.validaterCreateBus.is_duplicate.Unduplicate();
         }
     },
-
-    isSpecialChar(str) {
-        return !/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);
-    },
-
-    // add data to localstorage
+    /*
+        Add data to localstorage 
+        Create new business onsubmit event
+    */
     getCreateBusData(e) { 
         
         e.preventDefault();

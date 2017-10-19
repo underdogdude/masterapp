@@ -35,6 +35,5 @@ const loadAnimate = () => {
     $('#container').addClass('animated ' + 'bounceInLeft').one(animationEnd, function() {
         $('#container').removeClass('animated ' + 'bounceInLeft');
     });
-    console.log('bite');
 }
 window.onload = loadAnimate();

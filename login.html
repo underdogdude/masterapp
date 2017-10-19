@@ -29,9 +29,13 @@
         <div class="section-login container">
             <!-- Login -->
             <span id="section_login" class="animated fadeIn">
-                <div class="col-md-4"  id="form_login">   
-                    <form action="" method="post" name="Login_Form" 
-                        class="section-login__form" id = "formLogin">
+                <div class="col-md-4"  id="form_login">
+
+                    <form method="post" 
+                          name="Login_Form" 
+                          class="section-login__form" 
+                          id = "formLogin">
+
                         <h1 class="text-center text-bold text-title">
                             Log In
                         </h1>
@@ -51,7 +55,11 @@
                         </div>
 
                         <p class="text-danger" id = "alert" style="display:none;">Wrong username or password!</p>
-                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="Login" type="Submit">
+
+                        <button class="btn btn-lg btn-default btn-block btn-main" 
+                                name="submit" 
+                                value="Login"
+                                type="Submit">
                             <span class = "text-bold color__white">Login</span>
                         </button>
                     </form>
@@ -71,19 +79,34 @@
             </span>
             <!--  CREATE ACCOUNT  -->
             <span id="section_register" class="animated fadeIn hide">
-                <div class="col-md-4"  id="form_register">
-                    <form action="" method="post" name="register_Form" 
+                <div class="col-md-4"  id="formRegister">
+                    <form action="" method="post" name="formRegister" 
                         class="section-login__form">
                         <h1 class="text-center text-bold text-title">
                             Create Account
                         </h1>
                         <hr>
+                        <!--firstname-->
+                        <div class="input-group has-feedback">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-address-card" aria-hidden="true"></i>
+                                </span>
+
+                            <input type="text" class="form-control" name="firstname" placeholder="firstname" required="" autofocus="" onchange="ctrl.isValid('r_firstname')" id="r_firstname"/>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon1">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </span>
+
+                            <input type="text" class="form-control" name="email" placeholder="email" required="" onchange="ctrl.isValid('r_email')" id="r_email"/>
+                        </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                     <i class="fa fa-user"></i>
                                 </span>
 
-                            <input type="text" class="form-control" name="email" placeholder="email" required="" autofocus="" />
+                            <input type="text" class="form-control" name="username" placeholder="username" required="" autofocus="" />
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
@@ -117,6 +140,7 @@
 
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/validate.js" type="text/javascript"></script>
 <script src="js/login.js" type="text/javascript"></script>
     
 </html>
