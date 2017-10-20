@@ -19,8 +19,7 @@ const login = () => {
         console.log(response);
     });
 };
-
+window.onload = login();
 const register = () => {
 
-    
 };

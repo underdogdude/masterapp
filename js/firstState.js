@@ -10,15 +10,17 @@ const view = {
     
     changeState(slideOut, slideIn) {
 
-        $('#' + slideOut).addClass('animated-fast ' + 'slideOutLeft').one(animationEnd, function() {
-            $('#' + slideOut).removeClass();
-            $('#' + slideOut).addClass('hide');
-             
-            $('#' + slideIn).removeClass('hide');
+        $('#' + slideOut).addClass('animated-fast ' + 'slideOutLeft')
+            .one(animationEnd, function() {
+
+                $('#' + slideOut).removeClass();
+                $('#' + slideOut).addClass('hide');
+                $('#' + slideIn).removeClass('hide');
         });
 
-        $('#' + slideIn).addClass('animated-fast ' + 'slideInLeft').one(animationEnd, function() {
-            $('#' + slideIn).removeClass('animated-fast ' + 'slideInLeft ' + 'hide');
+        $('#' + slideIn).addClass('animated-fast ' + 'slideInLeft')
+            .one(animationEnd, function() {
+                $('#' + slideIn).removeClass('animated-fast ' + 'slideInLeft ' + 'hide');
         });
     },
 
@@ -146,7 +148,7 @@ const ctrl = {
         // case minimum char input
         if(length_busname === 0 || length_busname < 3) view.validaterCreateBus.invalid.invalid_minimun();
         // case special char input
-        else if(!isSpecialChar(value)) view.validaterCreateBus.invalid.invalid_special();
+        else if(isSpecialChar(value)) view.validaterCreateBus.invalid.invalid_special();
         else {
             // dupicate  
             if( has_duplicate !== -1 ) view.validaterCreateBus.is_duplicate.duplicate();
@@ -155,7 +157,7 @@ const ctrl = {
         }
     },
     /*
-        Add data to localstorage 
+        Add data to Sessionstorage 
         Create new business onsubmit event
     */
     getCreateBusData(e) { 

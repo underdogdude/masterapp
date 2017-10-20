@@ -54,7 +54,9 @@
                             <input type="password" class="form-control" name="Password" placeholder="Password" required="" id="login_password"/>
                         </div>
 
-                        <p class="text-danger" id = "alert" style="display:none;">Wrong username or password!</p>
+                        <p class="text-red" id = "alert" style="display:none;">
+                            Wrong username or password!
+                        </p>
 
                         <button class="btn btn-lg btn-default btn-block btn-main" 
                                 name="submit" 
@@ -79,48 +81,73 @@
             </span>
             <!--  CREATE ACCOUNT  -->
             <span id="section_register" class="animated fadeIn hide">
-                <div class="col-md-4"  id="formRegister">
+                <div class="col-md-4"  id="form_register">
                     <form action="" method="post" name="formRegister" 
-                        class="section-login__form">
+                          class="section-login__form" id="formRegister">
+
                         <h1 class="text-center text-bold text-title">
                             Create Account
                         </h1>
                         <hr>
-                        <!--firstname-->
-                        <div class="input-group has-feedback">
-                            <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-address-card" aria-hidden="true"></i>
-                                </span>
 
-                            <input type="text" class="form-control" name="firstname" placeholder="firstname" required="" autofocus="" onchange="ctrl.isValid('r_firstname')" id="r_firstname"/>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <!--Firstname-->
+                        <div>
+                            <div class="input-group has-feedback" id="r_firstname">
+                                <span class="input-group-addon">
+                                        <i class="fa fa-address-card" aria-hidden="true"></i>
                                 </span>
+                                <input type="text" class="form-control" placeholder="firstname"        required="" autofocus="" onchange="ctrl.isValid('r_firstname')"/>
+                                
+                            </div>
+                            <span id = "r_firstname_status" ></span>
+                        </div>
 
-                            <input type="text" class="form-control" name="email" placeholder="email" required="" onchange="ctrl.isValid('r_email')" id="r_email"/>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-user"></i>
-                                </span>
+                        <!--Email-->
+                        <div>
+                            <div class="input-group has-feedback" id="r_email">
+                                <span class="input-group-addon">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </span>
 
-                            <input type="text" class="form-control" name="username" placeholder="username" required="" autofocus="" />
+                                <input type="email" class="form-control" name="email" placeholder="email" required="" onchange="ctrl.isValid('r_email')"/>
+                            </div>
+                            <span id = "r_email_status" ></span>
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                            <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
+
+                        <!--username-->
+                        <div>
+                            <div class="input-group has-feedback" id="r_username">
+                                <span class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </span>
+
+                                <input type="text" class="form-control" name="username"                             placeholder="username" required="" autofocus=""
+                                       onchange="ctrl.isValid('r_username')"/>
+                            </div>
+                            <span id = "r_username_status" ></span>
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon1">
-                                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                                </span>
-                            <input type="password" class="form-control" name="Confirm Password" placeholder="Confirm Password" required="" />
+
+                        <!--Passsword-->
+                        <div>
+                            <div class="input-group has-feedback" id="r_password">
+                                <span class="input-group-addon">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                <input type="password" class="form-control" name="Password"                         placeholder="Password" required="" 
+                                       onchange="ctrl.isValid('r_password')"/>
+                            </div>
                         </div>
-                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="register" type="Submit">
+                        <!--Confirm Password-->
+                        <div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                    </span>
+                                <input type="password" class="form-control" name="Confirm Password" placeholder="Confirm Password" required="" />
+                            </div>
+                        </div>
+
+                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="register" type="Submit" disabled>
                             <span class = "text-bold color__white">Create Account</span>
                         </button>
                     </form>
@@ -142,5 +169,6 @@
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/validate.js" type="text/javascript"></script>
 <script src="js/login.js" type="text/javascript"></script>
+<script src="js/API.js" type="text/javascript"></script>
     
 </html>
