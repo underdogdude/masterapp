@@ -1,0 +1,2 @@
+# masterapp
+Serverless static website
