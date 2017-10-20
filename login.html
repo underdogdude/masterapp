@@ -97,9 +97,9 @@
                                         <i class="fa fa-address-card" aria-hidden="true"></i>
                                 </span>
                                 <input type="text" class="form-control" placeholder="firstname"        required="" autofocus="" onchange="ctrl.isValid('r_firstname')"/>
-                                
+                                <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
-                            <span id = "r_firstname_status" ></span>
+                            <span id = "r_firstname_status" class = "pull-left"></span>
                         </div>
 
                         <!--Email-->
@@ -109,7 +109,10 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </span>
 
-                                <input type="email" class="form-control" name="email" placeholder="email" required="" onchange="ctrl.isValid('r_email')"/>
+                                <input type="email" class="form-control" name="email" 
+                                       placeholder="email" required="" 
+                                       onchange="ctrl.isValid('r_email')"/>
+                                <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
                             <span id = "r_email_status" ></span>
                         </div>
@@ -123,6 +126,7 @@
 
                                 <input type="text" class="form-control" name="username"                             placeholder="username" required="" autofocus=""
                                        onchange="ctrl.isValid('r_username')"/>
+                                <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
                             <span id = "r_username_status" ></span>
                         </div>
@@ -135,8 +139,11 @@
                                     </span>
                                 <input type="password" class="form-control" name="Password"                         placeholder="Password" required="" 
                                        onchange="ctrl.isValid('r_password')"/>
+                                <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
+                            <span id = "r_password_status" ></span>
                         </div>
+                        
                         <!--Confirm Password-->
                         <div>
                             <div class="input-group">
@@ -144,6 +151,7 @@
                                         <i class="fa fa-unlock-alt" aria-hidden="true"></i>
                                     </span>
                                 <input type="password" class="form-control" name="Confirm Password" placeholder="Confirm Password" required="" />
+                                <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
                         </div>
 

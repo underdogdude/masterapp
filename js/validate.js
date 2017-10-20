@@ -14,6 +14,7 @@ const validation_alert = {
     Invalid : {
         Invalid_minimumchar : ' must contain at least 3 character',
         Invalid_minimum6char : ' must contain at least 6 characters',
+        Invalid_notmatch : ' not matching',
         Invalid_specialchar : ' does not contain special character',
         Invalid_email : 'Invalid ',
         Invalid_null : ' cannot be empty',
@@ -30,6 +31,14 @@ const isSpecialChar = (str) => {
 const isNull = (str) => {
 
     if(str.length === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+const isMoreThan = (number , sting) => {
+
+    if(sting.length >= number) {
         return true;
     } else {
         return false;
