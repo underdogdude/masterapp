@@ -1,25 +1,45 @@
 
 const URL = 'https://w5haykphii.execute-api.ap-southeast-1.amazonaws.com/dev/';
 
-const login = () => {
-    $.ajax({
-        url : URL + 'master/register',
-        type : 'POST',
-        headers : {
-            'Content-Type' : 'application/json'
-        },
-        dataType : 'json',
-        data : JSON.stringify({
-            "email": "abc@defg.com",
-            "password": "as",
-            "username": "Michel",
-            "firstname": "Veron"
+const API = {
+    register(param) {
+        return $.ajax({
+            url : URL + 'master/register',
+            type : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            dataType : 'json',
+            data : JSON.stringify(param)
         })
-    }).done(function(response) {
-        console.log(response);
-    });
-};
-window.onload = login();
-const register = () => {
+    },
 
-};
+    login() {
+
+    },
+
+    verify(param) {
+        return $.ajax({
+            url : URL + 'master/verify',
+            type : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            dataType : 'json',
+            data : JSON.stringify(param)
+        })
+    },
+
+    resend(param) {
+
+        return $.ajax({
+            url : URL + 'master/resend-verify',
+            type : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            dataType : 'json',
+            data : JSON.stringify(param)
+        })
+    }
+}

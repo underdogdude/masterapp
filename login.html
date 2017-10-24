@@ -141,22 +141,28 @@
                                        onchange="ctrl.isValid('r_password')"/>
                                 <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
+                            
                             <span id = "r_password_status" ></span>
+                            <p class="text-advise">
+                                Password must container at least 1 Uppercase(A), 1 Lowercase(a), 1 Number(0-9) and must contain at least 8 characters
+                            </p>
                         </div>
                         
                         <!--Confirm Password-->
                         <div>
-                            <div class="input-group">
+                            <div class="input-group has-feedback" id="r_repassword">
                                 <span class="input-group-addon">
                                         <i class="fa fa-unlock-alt" aria-hidden="true"></i>
                                     </span>
-                                <input type="password" class="form-control" name="Confirm Password" placeholder="Confirm Password" required="" />
+                                <input type="password" class="form-control" name="Confirm Password"                                          placeholder="Confirm Password" required="" 
+                                       onkeyup="ctrl.isMatch('r_password','r_repassword')"/>
                                 <span class="text-red absolute text-headline__thai text-bold"> * </span>
                             </div>
+                            <span id = "r_repassword_status" ></span>
                         </div>
-
-                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="register" type="Submit" disabled>
-                            <span class = "text-bold color__white">Create Account</span>
+                        <span id ="submit_status" class="text-red text-headline__thai text-bold"></span>
+                        <button class="btn btn-lg btn-default btn-block btn-main" name="submit" value="register" type="Submit" disabled id = "register_btn">
+                            <span class = "text-bold color__white" id ="register_btn_text">Create Account</span>
                         </button>
                     </form>
 

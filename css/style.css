@@ -144,7 +144,7 @@ button {
 
 .section-login {
 
-    overflow-y:hidden;
+    overflow-y:auto;
     background: white;
     padding: 1em;
     position: absolute;
@@ -276,6 +276,11 @@ button {
     margin-top:2em;
     margin-left: 1em;
 
+}
+.text-advise {
+
+    color: #ababab;
+    font-size: 10px;
 }
 
 .grey {
