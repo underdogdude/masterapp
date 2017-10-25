@@ -40,30 +40,31 @@
                             Log In
                         </h1>
                         <hr>
-                       
+                       <!--LOGIN USERNAME-->
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                     <i class="fa fa-user"></i>
                                 </span>
-                            <input type="text" class="form-control" name="email" placeholder="email" required="" autofocus="" id="login_email"/>
+                            <input type="text" class="form-control" name="login_username"                           placeholder="username" required="" autofocus="" id="login_username"/>
                         </div>
+                        <!--LOGIN Password-->
                         <div class="input-group">
                             <span class="input-group-addon" id="sizing-addon1">
                                     <i class="fa fa-lock"></i>
                                 </span>
-                            <input type="password" class="form-control" name="Password" placeholder="Password" required="" id="login_password"/>
+                            <input type="password" class="form-control" name="login_password" placeholder="Password" required="" id="login_password"/>
                         </div>
 
-                        <p class="text-red" id = "alert" style="display:none;">
-                            Wrong username or password!
-                        </p>
-
+                        <span id ="login_status" class="text-red text-headline__thai text-bold"></span>
                         <button class="btn btn-lg btn-default btn-block btn-main" 
                                 name="submit" 
                                 value="Login"
-                                type="Submit">
-                            <span class = "text-bold color__white">Login</span>
+                                type="Submit"
+                                id="login_btn">
+
+                            <span class = "text-bold color__white" id ="login_btn_text">Login</span>
                         </button>
+
                     </form>
                     <h6 class="btn-text text-center text-bold ">
                         Forgot Password ?

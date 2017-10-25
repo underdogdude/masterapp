@@ -14,8 +14,16 @@ const API = {
         })
     },
 
-    login() {
-
+    login(param) {
+        return $.ajax({
+            url: URL + 'master/login',
+            type : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            dataType : 'json',
+            data : JSON.stringify(param)
+        });
     },
 
     verify(param) {

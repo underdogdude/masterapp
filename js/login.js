@@ -44,28 +44,37 @@ const submit = {
 
     login() {
 
-        let email = $('#login_email').val().trim();
-        let pass = $('#login_password').val().trim();
+        let innerBtnText = document.getElementById('login_btn_text');
+        let status = document.getElementById('login_status');
+        let loading = `<i class="fa fa-circle-o-notch fa-spin"></i>
+                        <span class="sr-only">Loading...</span>`
+
+            innerBtnText.innerHTML = loading;
+        let username = $('#login_username').val().trim();
+        let password = $('#login_password').val().trim();
         // save email to sessgion storage
-        sessionStorage.email = email ? email : 'N/A';
+        sessionStorage.username = username ? username : 'N/A';
+        API.login({
+            "username" : username,
+            "password": password 
+        }).done(function (response) {
+            innerBtnText.innerHTML = 'Login';
 
-        if (email === 'vippass' && pass === 'vippass') {
+            if(response.success) {
+                sessionStorage.store = JSON.stringify(response.data);
+                redirect("login","index");
 
-            redirect("login", "index");
+            } else {
 
-        } else if (email === 'first' && pass === 'first') {
-
-            redirect("login", "firstState");
-
-        } else {
-
-            form_elem.addClass('animated-fast ' + 'shake')
+                status.innerHTML = response.message.message;
+                form_elem.addClass('animated-fast ' + 'shake')
                 .one(animationEnd, function () {
 
                     form_elem.removeClass('animated-fast ' + 'shake');
                 });
-            $('#alert').show();
-        }
+                
+            }   
+        })
     },
 
     register() {

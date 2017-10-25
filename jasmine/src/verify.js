@@ -1,7 +1,7 @@
 let user_email = JSON.parse(sessionStorage.email) ? JSON.parse(sessionStorage.email) : '-';
 document.getElementById('user_email').innerHTML = user_email;
-let username = JSON.parse(sessionStorage.username) ? JSON.parse(sessionStorage.username) : '-';
 
+let username = JSON.parse(sessionStorage.username) ? JSON.parse(sessionStorage.username) : '-';
 
 const submit = {
 
@@ -26,7 +26,7 @@ const submit = {
             innerBtnText.innerHTML = 'Verify';
             if (response.success) {
 
-                redirect("verify", "firstState");
+                redirect("verify", "index");
             } else {
                 status.innerHTML = response.message.message;
             }
@@ -47,9 +47,8 @@ const submit = {
             status.innerHTML = '';
             if (response.success) {
                 status.innerHTML = success;
-                
             } else {
-                status.innerHTML = `<p class="text-red">${response.message.message}</p>`;
+                status.innerHTML = `<p class="pull-left text-red">${response.message.message}</p>`;
             }
         });
     }
@@ -66,3 +65,10 @@ $('#formVerify').submit(function (e) {
     e.preventDefault();
     submit.verify();
 });
+
+function Add (a,b) {
+    return a+b;
+}
+function multiply  (a,b) {
+    return a * b;
+}

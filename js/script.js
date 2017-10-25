@@ -1,9 +1,9 @@
 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 let business = document.getElementById('businessDisplay');
-    business.innerHTML = sessionStorage.bus;
+    business.innerHTML = sessionStorage.bus ? sessionStorage.bus : '-';
 
 let user = document.getElementById('usernameDisplay');
-    user.innerHTML = sessionStorage.email;
+    user.innerHTML = sessionStorage.username;
 
 let business_img = document.getElementById('bus_thumbnail');
 if (sessionStorage.img) {
